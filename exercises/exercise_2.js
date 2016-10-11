@@ -3,12 +3,13 @@ import wd from 'wd';
 import { sleep } from 'asyncbox';
 
 let driver = wd.promiseChainRemote('localhost', 4723);
-// TODO - set the capabilities to test over Chrome in an Android Emulator
+// TODO - set the capabilities to test over Chrome in an iOS Simulator
 let capabilities = {
   "browserName" : "Safari",
-  "deviceName" : "iPhone 5s Simulator",
+  "deviceName" : "iPhone 5s",
   "platformName" : "iOS",
-  "platformVersion" : "9.3"
+  "platformVersion" : "9.3",
+  "automationName": "XCUITest"
 };
 
 describe("Test appium workshop excersie 2", _ => {
@@ -27,7 +28,7 @@ describe("Test appium workshop excersie 2", _ => {
     await driver.get('http://appium-workshop.github.com');
     await sleep(500);
     let title = await driver.title();
-    title.should.equal("NodeConf Appium Workshop");
+    title.should.equal("Appium Workshop");
     done();
   });
 
