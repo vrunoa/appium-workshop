@@ -4,7 +4,7 @@
   "description": "Learn Appium step by step with this workshop",
   "main": "index.js",
   "scripts": {
-    "pretest" : "npm run build",
+    "pretest": "npm run build",
     "test": "./bin/verify",
     "build": "./node_modules/babel-cli/bin/babel.js exercises -d dist",
     "prepublish": "npm run build"
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/vrunoa/appium-workshop#readme",
   "dependencies": {
+    "appium-running": "^0.1.5",
     "asyncbox": "^2.3.1",
     "babel-cli": "^6.16.0",
     "babel-core": "^6.17.0",

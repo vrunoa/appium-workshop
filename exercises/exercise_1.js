@@ -1,17 +1,18 @@
 import chai from 'chai';
+chai.should();
 import wd from 'wd';
 import { sleep } from 'asyncbox';
 
 let driver = wd.promiseChainRemote('localhost', 4723);
-// TODO - set the capabilities to test over Chrome in an Android Emulator
+// TODO - set the capabilities to test over Chrome in an iOS Simulator
 let capabilities = {
-  "browserName" : "Chrome",
-  "deviceName" : "Android Emulator",
-  "platformName" : "Android",
-  "platformVersion" : "4.4.3"
+  "browserName" : "Safari",
+  "deviceName" : "iPhone 5s",
+  "platformName" : "iOS",
+  "platformVersion" : "10.0",
 };
 
-describe("Test appium workshop excersie 1", _ => {
+describe("Test appium workshop exercise 1", _ => {
 
   before(async () => {
     await driver.init(capabilities);
@@ -21,14 +22,12 @@ describe("Test appium workshop excersie 1", _ => {
     await driver.quit();
   });
 
-  it("Test url opens on Android Emulator", async (done) => {
+  it("Test page title is correct", async () => {
     await sleep(5000);
-    // TODO - open http://appium-workshop.github.com/ url and verify the title equals Node Conf Appium Aorkshop
-    await driver.get('http://appium-workshop.github.com');
+    // TODO - open https://vrunoa.github.io/appium-workshop/ url and verify the title equals Appium Aorkshop
+    await driver.get('https://vrunoa.github.io/appium-workshop/');
     await sleep(500);
     let title = await driver.title();
-    title.should.equal("NodeConf Appium Workshop");
-    done();
+    title.should.equal("Appium Workshop");
   });
-
 });

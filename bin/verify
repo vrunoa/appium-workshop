@@ -5,10 +5,8 @@ var argv = process.argv.slice(2);
 var testName = argv[0];
 var cmd = path.join(__dirname, "..", "node_modules", ".bin", "mocha");
 var testPath = path.join(__dirname, "..", "dist", testName+".js");
-var test = spawn(cmd, [testPath, "--compilers",
-  "js:babel-core/register", "-t", "0", "-R", "nyan"],
-  { stdio: 'inherit'}
-);
+var params = [testPath, "--compilers", "js:babel-core/register", "-t", "0"];
+var test = spawn(cmd, params, { stdio: 'inherit'});
 test.on("close", function(code){
   process.exit(code);
 });
