@@ -2,6 +2,7 @@ import chai from 'chai';
 chai.should();
 import wd from 'wd';
 import { sleep } from 'asyncbox';
+import isAppiumRunning from 'appium-running';
 
 let driver = wd.promiseChainRemote('localhost', 4723);
 // TODO - set the capabilities to test over Chrome in an iOS Simulator
@@ -15,6 +16,8 @@ let capabilities = {
 describe("Test appium workshop exercise 1", _ => {
 
   before(async () => {
+    let success = await isAppiumRunning();
+    if(!success) throw new Error("Appium is not running!");
     await driver.init(capabilities);
   });
 
