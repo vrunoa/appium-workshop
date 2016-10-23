@@ -4,13 +4,12 @@ import wd from 'wd';
 import { sleep } from 'asyncbox';
 
 let driver = wd.promiseChainRemote('localhost', 4723);
-// TODO - set the capabilities to test over Chrome in an iOS Simulator
 let capabilities = {
-  "browserName" : "Browser",
-  "deviceName" : "Android Emulator",
-  "platformName" : "Android",
-  "platformVersion" : "5.0",
-  "avd" : "Nexus_5_API_19"
+  "browserName" : "",
+  "deviceName" : " Emulator",
+  "platformName" : "",
+  "platformVersion" : "",
+  "avd" : ""
 };
 
 describe("Test appium workshop exercise 2", _ => {
@@ -24,12 +23,12 @@ describe("Test appium workshop exercise 2", _ => {
   });
 
   it("Test url opens on Android Emulator", async () => {
-    
-    await driver.setImplicitWaitTimeout(5000);
-    // TODO - open https://vrunoa.github.io/appium-workshop/ url and verify the title equals Appium Aorkshop
-    await driver.get('http://vrunoa.github.io/appium-workshop/');
+    await sleep(5000);
+    let url = "";
+    await driver.get(url);
     await sleep(500);
-    let title = await driver.title();
-    title.should.equal("Appium Workshop");
+    let title = "";
+    let pageTitle = await driver.title();
+    pageTitle.should.equal(title);
   });
 });
