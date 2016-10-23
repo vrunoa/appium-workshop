@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "pretest": "npm run build",
-    "test": "./bin/verify",
+    "test": "./bin/test",
+    "verify": "./node_modules/babel-cli/bin/babel.js solutions -d dist && ./bin/verify",
     "build": "./node_modules/babel-cli/bin/babel.js exercises -d dist",
     "prepublish": "npm run build"
   },
