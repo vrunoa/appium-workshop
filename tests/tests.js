@@ -24,9 +24,9 @@ describe("Testing appium workshop pages", _ => {
   });
 
   it("Test index.html", async () => {
-    await sleep(5000);
     let url = `${localIP}/index.html`;
     await driver.get(url);
+    url = await driver.getCurrentUrl();
     await sleep(500);
     let pageTitle = await driver.title();
     pageTitle.should.equal("Appium Workshop");
@@ -62,7 +62,7 @@ describe("Testing appium workshop pages", _ => {
     isVisible.should.equal(true);
     await button.click();
     await sleep(1500);
-    url = await driver.currentUrl();
+    url = await driver.url();
     url.should.equal(`${localIP}/finding_elements.html`);
   });
 });
