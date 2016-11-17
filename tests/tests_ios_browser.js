@@ -150,49 +150,6 @@ describe("Testing appium workshop pages", _ => {
     url = await driver.eval("window.location.href");
     url.should.equal(`${localIP}/swiping_stuff.html`);
   });
-  /*
-  it("Test swiping_stuff.html", async () => {
-    let url = `${localIP}/swiping_stuff.html`;
-    await driver.get(url);
-    /*
-    let pageTitle = await driver.title();
-    pageTitle.should.equal("Appium Workshop - Its swipe time");
-    let els = [
-      { className: 'title', visible: true},
-      { className: 'intro_text', visible: true},
-      { className: 'button_2', visible:false}
-    ]
-    for(let i in els) {
-      let el = await driver.elementByClassName(els[i].className);
-      el.should.not.equal(null);
-      let isVisible = await el.isDisplayed();
-      isVisible.should.equal(els[i].visible);
-    }
-    */
-    /*
-    const swipeUp = async() => {
-      let action = new wd.TouchAction(driver);
-          action.press({x: 200, y: 300})
-                .wait(100)
-                .moveTo({x: 200, y: 30})
-                .release();
-      console.log(action);
-      await action.perform();
-    }
-    let el = await driver.elementById("hidden_text");
-    let button = await driver.elementById("button_1");
-    let isVisible = await el.isDisplayed();
-    while(isVisible === false) {
-      await swipeUp();
-      await sleep(1500);
-      try {
-        await button.click();
-      }catch(e){ console.log(e); }
-      await el.isDisplayed();
-    }
-    *
-  })
-  */
   it("Test hybrid_context.html", async () => {
     let url = `${localIP}/hybrid_context.html`;
     await driver.get(url);

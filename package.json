@@ -6,7 +6,6 @@
   "scripts": {
     "pretest": "npm run build",
     "test": "./bin/test",
-    "showme": "./node_modules/babel-cli/bin/babel.js solutions -d dist && ./bin/showme",
     "build": "./node_modules/babel-cli/bin/babel.js exercises -d dist",
     "tests_build": "./node_modules/babel-cli/bin/babel.js tests -d tests_build",
     "prepublish": "npm run build",
