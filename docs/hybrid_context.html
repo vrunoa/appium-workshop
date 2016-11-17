@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Appium Workshop</title>
+  <title>Appium Workshop - Hybrid</title>
   <meta name="description" content="NodeConf Appium workshop">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,10 +14,10 @@
 <body>
   <div class="container">
     <h1 class="title">Welcome to the WEBVIEW_CONTEXTS</h1>
-    <p>If you are running this from an hybrid app, make sure you change conexts before start testing this page.</p>
+    <p class="intro_text">If you are running this from an hybrid app, make sure you change conexts before start testing this page.</p>
     <div>
-      <button id="button_2" onclick="gotoPage('sauce_connect.html')"style="display:none;">Tunneling!</button><br />
-      <button id="button_1" onclick="showHidden('button_2', 'button_1')">Im here, click me!</button>
+      <button id="button_2" class="button_2" onclick="gotoPage('sauce_connect.html')"style="display:none;">Tunneling!</button><br />
+      <button id="button_1" class="button_1" onclick="showHidden('#button_2', '#button_1')">Im here, click me!</button>
     </div>
   </div>
 </body>

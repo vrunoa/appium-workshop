@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Appium Workshop</title>
+  <title>Appium Workshop - SC</title>
   <meta name="description" content="NodeConf Appium workshop">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,12 +14,12 @@
 <body>
   <div class="container">
     <h1 class="title">Sauce Connect</h1>
-    <p>If you are planning to run some tests on the cloud with SauceLabs maybe you want to test some pages that arent public yet or they are in a local server on your machine. If that's the case Sauce Connect gives you the solution.<br /><br />
+    <p class="intro_text">If you are planning to run some tests on the cloud with SauceLabs maybe you want to test some pages that arent public yet or they are in a local server on your machine. If that's the case Sauce Connect gives you the solution.<br /><br />
     Make sure you download SC from <a href="https://wiki.saucelabs.com/display/DOCS/Setting+Up+Sauce+Connect">here</a> and once you have the bin file run: <br />
     <span class="code">./bin/sc -u SAUCE_USER -k SAUCE_KEY</span><br /></p>
     <div>
-      <img src="res/phone_five.gif" id="phone_five" style="display:none"/><br />
-      <button id="button_1" onclick="showHidden('phone_five', 'button_1')">High five!</button>
+      <img src="res/phone_five.gif" class="phone_five" id="phone_five" style="display:none"/><br />
+      <button id="button_1" class="button_1" onclick="showHidden('#phone_five', '#button_1')">High five!</button>
     </div>
   </div>
 </body>

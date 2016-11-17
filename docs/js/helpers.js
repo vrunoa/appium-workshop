@@ -39,7 +39,7 @@ function verifyForm(form) {
     showError("Come on, im doing my best! Please check the checkbox");
     return;
   }
-  showHidden("thanks_container", "form_container");
+  showHidden("#thanks_container", "#form_container");
 }
 
 function dummyClear(elId) {

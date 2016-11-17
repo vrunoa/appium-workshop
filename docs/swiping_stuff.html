@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Appium Workshop</title>
+  <title>Appium Workshop - Its swipe time</title>
   <meta name="description" content="NodeConf Appium workshop">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,13 +15,19 @@
   <div class="container">
     <div style="position:fixed;">
       <h1 class="title">Lets swipe!</h1>
-      <p>Swipe down until you find waldo!</p>
+      <p class="intro_text">Swipe down until you find waldo!</p>
     </div>
     <div id="swipe_container">
-      <button id="button_2" onclick="gotoPage('hybrid_context.html')"style="display:none;">Next!</button><br />
-      <img src="res/waldo.png" id="image_1" style="margin-top:1600px;"/><br />
-      <button id="button_1" onclick="showHidden('hidden_text', 'button_1');showHidden('button_2', 'button_2');">I found it</button>
-      <p id="hidden_text">Swipe up and look for the Next button</p>
+      <button id="button_2" class="button_2" onclick="gotoPage('hybrid_context.html')"style="display:none;">Next!</button><br />
+      <br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <img src="res/waldo.png" id="image_1" /><br />
+      <button id="button_1" onclick="showHidden('#hidden_text', '#button_1');showHidden('#button_2', '#button_2');">I found it</button>
+      <p id="hidden_text" style="display:none;">Swipe up and look for the Next button</p>
     </div>
   </div>
 </body>
