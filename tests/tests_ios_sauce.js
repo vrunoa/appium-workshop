@@ -3,15 +3,19 @@ chai.should();
 const expect = chai.expect;
 import wd from 'wd';
 import { sleep } from 'asyncbox';
+import sauce_keys from '../keys.json';
 
-const localIP = 'http://10.0.2.2:8080'
-let driver = wd.promiseChainRemote('localhost', 4723);
+const localIP = 'https://vrunoa.github.io/appium-workshop/'
+const server = `http://${sauce_keys.production.user}:${sauce_keys.production.key}@ondemand.saucelabs.com:80/wd/hub`;
+
+let driver = wd.promiseChainRemote(server);
 let capabilities = {
-  "browserName" : "browser",
-  "deviceName" : "Android Emulator",
-  "platformName" : "Android",
-  "platformVersion" : "4.4",
-  "avd" : "Phone_Landscape_API_19",
+  "browserName" : "Safari",
+  "deviceName" : "iPhone 6s Simulator",
+  "platformName" : "iOS",
+  "platformVersion" : "9.3",
+  "appiumVersion" : "1.5.3",
+  "name": "Testing iOS in the cloud"
 };
 
 describe("Testing appium workshop pages", _ => {
@@ -149,7 +153,7 @@ describe("Testing appium workshop pages", _ => {
     await el.click();
     await sleep(1500);
     url = await driver.eval("window.location.href");
-    url.should.equal(`${localIP}/hybrid_context.html`);
+    url.should.equal(`${localIP}/swiping_stuff.html`);
   });
   it("Test hybrid_context.html", async () => {
     let url = `${localIP}/hybrid_context.html`;

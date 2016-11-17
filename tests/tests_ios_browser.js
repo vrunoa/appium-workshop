@@ -148,7 +148,7 @@ describe("Testing appium workshop pages", _ => {
     await el.click();
     await sleep(1500);
     url = await driver.eval("window.location.href");
-    url.should.equal(`${localIP}/swiping_stuff.html`);
+    url.should.equal(`${localIP}/hybrid_context.html`);
   });
   it("Test hybrid_context.html", async () => {
     let url = `${localIP}/hybrid_context.html`;
