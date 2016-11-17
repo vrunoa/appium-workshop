@@ -123,6 +123,5 @@ describe("Testing appium workshop native app", _ => {
     await driver.back();
     currentActivity = await driver.getCurrentActivity();
     currentActivity.should.equal(".SplashActivity");
-
   });
 });

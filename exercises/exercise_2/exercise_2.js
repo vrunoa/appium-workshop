@@ -6,7 +6,7 @@ import { sleep } from 'asyncbox';
 let driver = wd.promiseChainRemote('localhost', 4723);
 let capabilities = {
   "browserName" : "",
-  "deviceName" : " Emulator",
+  "deviceName" : " ",
   "platformName" : "",
   "platformVersion" : "",
   "avd" : ""
@@ -26,9 +26,5 @@ describe("Test appium workshop exercise 2", _ => {
     await sleep(5000);
     let url = "";
     await driver.get(url);
-    await sleep(500);
-    let title = "";
-    let pageTitle = await driver.title();
-    pageTitle.should.equal(title);
   });
 });

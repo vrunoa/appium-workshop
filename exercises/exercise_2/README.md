@@ -1,8 +1,8 @@
 # Exercise 2
-Run the same test we create on exercise 1, but this time instead of using an
-iOS simulator, tell appium to run the test over an Android Emulator.
+For our first exercise we want to open our workshop page in an iOS
+Simulator and verify the title is "Appium Workshop"
 
 Run your solution and see the test results
 ```bash
-npm test exercise_2
+npm test exercise_1
 ```

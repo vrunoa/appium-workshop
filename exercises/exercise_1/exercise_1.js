@@ -25,9 +25,5 @@ describe("Test appium workshop exercise 1", _ => {
     await sleep(5000);
     let url = "";
     await driver.get(url);
-    await sleep(500);
-    let title = "";
-    let pageTitle = await driver.title();
-    pageTitle.should.equal(title);
   });
 });

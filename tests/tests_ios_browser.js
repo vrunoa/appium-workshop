@@ -4,13 +4,14 @@ const expect = chai.expect;
 import wd from 'wd';
 import { sleep } from 'asyncbox';
 
-const localIP = 'http://10.0.2.2:8080'
+const localIP = 'http://localhost:8080'
 let driver = wd.promiseChainRemote('localhost', 4723);
 let capabilities = {
   "browserName" : "safari",
-  "deviceName" : "iPhone 5s Simulator",
+  "deviceName" : "iPhone 5s",
   "platformName" : "ios",
-  "platformVersion" : "9.3"
+  "platformVersion" : "9.3",
+  "automationName" : "XCUITest"
 };
 
 describe("Testing appium workshop pages", _ => {
