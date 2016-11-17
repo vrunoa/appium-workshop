@@ -4,9 +4,9 @@ var path = require('path');
 var argv = process.argv.slice(2);
 var testName = argv[0];
 var cmd = path.join(__dirname, "..", "node_modules", ".bin", "mocha");
+console.log(cmd);
 var testPath = path.join(__dirname, "..", "dist", testName, testName+".js");
 console.log(testPath);
-process.exit(1);
 var params = [testPath, "--compilers", "js:babel-core/register", "-t", "0"];
 var test = spawn(cmd, params, { stdio: 'inherit'});
 test.on("close", function(code){
