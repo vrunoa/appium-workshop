@@ -6,14 +6,23 @@
   <title>Appium Workshop</title>
   <meta name="description" content="NodeConf Appium workshop">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-
+  <script src="js/helpers.js"></script>
 </head>
 
 <body>
-  <h1 class="title">Appium Workshop</h1>
-  <p>Welcome to the Appium workshop, a simple guide to create, run and improve mobile testing with Appium. Because testing is good!<br />
-    Start from scratch, use local and cloud devices both Android and iOS.</p>
-  <button id="get-started">Lets get started!</button>
+  <div class="container">
+    <h1 class="title">Appium Workshop</h1>
+    <p class="welcome_text">Welcome to the Appium workshop, a simple guide to create, run and improve mobile testing with Appium. Because testing is good!<br />
+      Start from scratch, use local and cloud devices both Android and iOS.</p>
+    <p class="started_text">Lets get started!</p><br />
+    <button type="button" id="button_1" class="button_1" onclick="showHidden('#click_container', '.goto_texts'); showHidden('#click_container', '#button_1');">Press this button</button>
+    <p class="goto_texts">to go to the next page</p>
+    <div id="click_container" style="display:none">
+      <p class="lied_text">I lied, press this one<p/>
+      <button type="button" onclick="gotoPage('/finding_elements.html')" id="button_2" class="button_2">Click me!</button>
+    </div>
+  </div>
 </body>
 </html>
